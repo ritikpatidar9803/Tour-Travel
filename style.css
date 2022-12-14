@@ -82,7 +82,7 @@ section{
 }
 .cars-section .cars{
     width: 100%;
-    height: 38rem;
+    height: 600px;
 }
 .cars-section .cars .cars-name{
     flex-direction: row;
@@ -240,6 +240,7 @@ section{
 /* places section*/
 .places{
     background-color: rgba(0, 0,0, 0.9);
+    padding-top: 2rem;
 }
 .places .location{
     width: 100%;
@@ -253,10 +254,13 @@ section{
     grid-gap: 1rem;
 }
 .places .location .cities img{
-    width: 100%;
+    width: 80%;
     height: 80%;
     object-fit:cover;
     border-radius: 6px;
+}
+.places .location .cities img:hover{
+    transform: scale(2);
 }
 
 /* Contact us */
@@ -338,6 +342,7 @@ footer .wrapper .social a{
     }
     .booking .content{
         justify-content: center;
+        gap: 7rem;
     }
     .features .feature{
         width: 100%;
@@ -395,6 +400,12 @@ footer .wrapper .social a{
     .contact .wrapper .right{
         height:40vh;
         width: 100%;
+    }
+    .cars-section .cars{
+        height: 400px;
+    }
+    .contact .wrapper .left i{
+        padding: -0.5rem;
     }
 }
 
