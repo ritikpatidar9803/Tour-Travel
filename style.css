@@ -1,5 +1,5 @@
 :root{
-    --purple-color: #BD5CFF;
+    --purple-color: #eb5b08;
     --color2 : #000000;
     --color1 : #FFFFFF;
 }
@@ -12,7 +12,7 @@
     padding: 0;    
 }
 body{
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Signika', sans-serif;
     font-weight: 400;
     color: var(--color1);
 }
@@ -26,6 +26,9 @@ body{
     align-items: center;
     flex-direction: column;
 }
+a, a:active , a:hover{
+    color:var(--color1);
+}
 h2{
     text-align: center;
     font-size: 48px;
@@ -33,12 +36,13 @@ h2{
 section{
     height: 100vh;
     width: 100vw;
-    padding: 0 90px;
+    padding: 0px 90px;
 }
 .hero{
     background-image: url("./images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .hero .nav{
     height: 100vh;
@@ -61,7 +65,7 @@ section{
 .hero .nav span{
     font-size: 3rem;
     color: var(--purple-color);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
 }
 .hero .nav h1{
@@ -223,15 +227,15 @@ section{
     width: 4.8rem;
 }
 .features .feature .item i{
-    width: 100px;
-    height: 100px;
+    width: 6.3rem;
+    height: 6.3rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--purple-color);
     color: var(--color1);
-    font-size:32px;
+    font-size:2.2rem;
 } 
 .features .feature .item i:hover{
     transform: scale(1.3);
@@ -241,6 +245,7 @@ section{
 .places{
     background-color: rgba(0, 0,0, 0.9);
     padding-top: 2rem;
+    height: max-content;
 }
 .places .location{
     width: 100%;
@@ -254,7 +259,7 @@ section{
     grid-gap: 1rem;
 }
 .places .location .cities img{
-    width: 80%;
+    width: 100%;
     height: 80%;
     object-fit:cover;
     border-radius: 6px;
@@ -310,14 +315,26 @@ footer{
     background-color: var(--color2);
     padding: 1rem;
 }
+footer .wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+footer .wrapper .photo{
+    width: 150px;
+}
+footer .wrapper .photo img{
+    width: 100%;
+}
+
 footer .wrapper h1{
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--purple-color);
     text-align: center;
 }
 footer .wrapper h2{
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 footer .wrapper .social{
     margin-top: 1rem;
@@ -357,9 +374,22 @@ footer .wrapper .social a{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
-    .places .location .cities img{
+    
+}
+@media(max-width:800px){
+    html{
+        font-size: 11px;
+    }
+    .contact .wrapper{
+        flex-direction: column;
+    }
+    .contact .wrapper .left{
+        height: 50%;
         width: 100%;
-        height: 100%;
+    }
+    .contact .wrapper .right{
+        height:40vh;
+        width: 100%;
     }
 }
 @media(max-width: 500px){
@@ -382,30 +412,21 @@ footer .wrapper .social a{
     .booking .content .book{
         display: none;
     }
+    .places{
+        height: max-content;
+    }
     .places .location .cities{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
-    }
-    .places .location .cities img{
-        width: 80%;
-        height: 80%;
-    }
-    .contact .wrapper{
-        flex-direction: column;
-    }
-    .contact .wrapper .left{
-        height: 50%;
-        width: 100%;
-    }
-    .contact .wrapper .right{
-        height:40vh;
-        width: 100%;
     }
     .cars-section .cars{
         height: 400px;
     }
     .contact .wrapper .left i{
         padding: -0.5rem;
+    }
+    footer .wrapper .photo{
+        width: 90px;
     }
 }
 
